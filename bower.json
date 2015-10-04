@@ -1,0 +1,21 @@
+{
+  "name": "ratchet",
+  "version": "0.0.0",
+  "authors": [
+    "David D'Agostino <dave@dags.io>"
+  ],
+  "description": "Chat Online",
+  "license": "MIT",
+  "homepage": "https://dags.io",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+      "angular-material": "~0.11.2",
+      "angular-route" : "~1.4.7"
+  }
+}
