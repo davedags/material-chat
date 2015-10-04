@@ -1,7 +1,18 @@
+
+ <md-content layout-padding layout="row" layout-sm="column" class="chat-history-wrapper">
+   <div class="chat-history" id="chatBox">
+     <div ng-repeat="message in messages">
+       <div class="chat-message">
+	 <div class="messageTextInMessage">{{message.msg}}</div>
+       </div>
+     </div>
+   </div>
+ </md-content>
+
 <md-content layout-padding layout="row" layout-sm="column">
     <md-input-container>
-        <label>Chat Box</label>
-        <input Dng-model="user.title" placeholder="Say something ...">
-
-</md-input-container>
-</md-content>
+      <form ng-submit="sendChat(im)">
+        <input ng-model="im.msg">
+      </form>
+    </md-input-container>
+ </md-content>
