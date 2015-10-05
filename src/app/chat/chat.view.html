@@ -1,6 +1,6 @@
 
  <md-content layout-padding layout="row" layout-sm="column" class="chat-history-wrapper">
-   <div class="chat-history" id="chatBox">
+   <div class="chat-history" id="chatBox" scroll-glue>
      <div ng-repeat="message in messages">
        <div class="chat-message">
 	 <div class="messageTextInMessage">{{message.msg}}</div>

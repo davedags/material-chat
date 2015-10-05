@@ -2,7 +2,8 @@
 
 angular.module('ChatApp', [
     'ngMaterial',
-    'ngRoute'
+    'ngRoute',
+    'luegg.directives'
 ])
     .config(['$routeProvider', function ($routeProvider) {
 	$routeProvider
