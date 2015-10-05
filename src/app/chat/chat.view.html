@@ -1,5 +1,5 @@
 
- <md-content layout-padding layout="row" layout-sm="column" class="chat-history-wrapper">
+ <md-content layout-padding layout="row" layout-sm="column">
    <div class="chat-history" id="chatBox" scroll-glue>
      <div ng-repeat="message in messages">
        <div class="chat-message">
@@ -12,7 +12,8 @@
 <md-content layout-padding layout="row" layout-sm="column">
     <md-input-container>
       <form ng-submit="sendChat(im)">
-        <input ng-model="im.msg">
+	<label>Chat</label>
+        <input size="50%" ng-model="im.msg" placeholder="Speak... or forever hold your...">
       </form>
     </md-input-container>
  </md-content>
