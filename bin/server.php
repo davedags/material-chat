@@ -1,6 +1,8 @@
 <?php
 use Ratchet\Server\IoServer;
-use ChatApp\Chat;
+use Ratchet\Http\HttpServer;
+use Ratchet\WebSocket\WsServer;
+use ChatApp\ConnectionHandler;
 
 require dirname(__DIR__) . '/vendor/autoload.php';
 
@@ -8,7 +10,7 @@ require dirname(__DIR__) . '/vendor/autoload.php';
 $server = IoServer::factory(
     new HttpServer(
         new WsServer(
-            new Chat()
+            new ConnectionHandler()
         )
     ),
             8080

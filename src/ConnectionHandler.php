@@ -3,18 +3,19 @@ namespace ChatApp;
 use Ratchet\MessageComponentInterface;
 use Ratchet\ConnectionInterface;
 
-class Chat implements MessageComponentInterface {
+class ConnectionHandler implements MessageComponentInterface {
     protected $clients;
 
     public function __construct() {
         $this->clients = new \SplObjectStorage;
     }
 
-
     public function onOpen(ConnectionInterface $conn) {
         $this->clients->attach($conn);
-
         echo "New connection! ({$conn->resourceId})\n";
+        $message = new Models\Message('Welcome to the test chat app');
+        $message->setUsername('bot');
+        $conn->send($message->json());
     }
 
     public function onMessage(ConnectionInterface $from, $msg) {
