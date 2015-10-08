@@ -1,17 +1,20 @@
 
  <md-content layout-padding layout="row" layout-sm="column">
-   <div class="chat-history" id="chatBox" scroll-glue>
-     <div ng-repeat="message in messages">
-       <div class="chat-message">
-	 <div class="chat-message-author">@{{message.username}}</div>
-	 <div class="chat-message-text">{{message.text}}</div>
+   <ol class="discussion" id="chatBox" scroll-glue>
+     <li class="other" ng-repeat="message in messages">
+       <div class="avatar">
+	 <img src="https://secure.gravatar.com/avatar/bd6cc9dbfef9928c1bb7afb72df13d93.jpg" width="50px" height="45px" />
        </div>
-     </div>
-   </div>
+       <div class="messages">
+	 <p>{{message.text}}</p>
+	 <time datetime="2015-10-08T23:00">Dags * 51 min</tim>
+       </div>
+      </li>
+    </ol>
  </md-content>
 
 <md-content layout-padding layout="row" layout-sm="column">
-    <md-input-container>
+    <md-input-container style="bottom: 0; position:fixed;">
       <form ng-submit="sendChat(text)">
 	<label>Chat</label>
         <input size="50%" ng-model="text" placeholder="What's on your mind?">
