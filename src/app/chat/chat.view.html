@@ -1,6 +1,7 @@
 
  <md-content layout-padding layout="row" layout-sm="column">
-   <ol class="discussion" id="chatBox" scroll-glue>
+   <div class="chat-history" id="chatBox" scroll-glue>
+   <ol class="discussion" id="chatBoxOl">
      <li class="other" ng-repeat="message in messages">
        <div class="avatar">
 	 <img src="https://secure.gravatar.com/avatar/bd6cc9dbfef9928c1bb7afb72df13d93.jpg" width="50px" height="45px" />
@@ -11,7 +12,8 @@
        </div>
       </li>
     </ol>
- </md-content>
+   </div>
+</md-content>
 
 <md-content layout-padding layout="row" layout-sm="column">
     <md-input-container style="bottom: 0; position:fixed;">
